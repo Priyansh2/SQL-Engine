@@ -1,15 +1,14 @@
-# MiniSQL
-A SQL engine written in python capable of parsing and executing medium-complexity queries.
-
 ## Instructions
-_NOTE:_ Column name should not start with int, and should not contain a `.`
+Run the `mini_sql.sh` with query as arguement (without ";" at end )
+_NOTE_: 1. Column name should not start with number.
+2. The case of the DML language (query) does not matter.
+3. Consider 'CSE441_ DATABASE SYSTEMS ASSIGNMENT 1.pdf' for more details about the DML language.
 <br/>
 Handles the following cases of query processing:
 - Blank column entries while entering data from data_file.
 - Multiple AND or OR queries, including nested ones.
 - Handling operators like `=, !=, >, <, <=, >=` in column comparison.
 - Handling queries of the form:
-  - **The case of the DML language does not matter.**
   - SELECT select from A;
   - SELECT * from table1,table2 WHERE A = "234" OR (B=23 AND C=D);
   - SELECT *,A from A,B WHERE A = 234;
