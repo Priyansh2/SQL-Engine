@@ -13,7 +13,7 @@ Mini SQL Engine is written in Python and can parse and execute SQL queries (give
 - Table alaising
  
  ## NOTE: 
-1. Column name should not start with number ```TODO``` but can contain a table name. 
+1. Column name should not start with number but can contain a table name. 
 2. The case of the DML language (query) does not matter.
 4. When selection from multiple tables is made, then user will expect to give a equijoin condition else, it would perform cross-join and output the result accordingly.
 5. In case of multiple AND/OR, the conditions will be properly enclosed within ```()```.
