@@ -6,12 +6,9 @@ import collections
 import sqlparse
 import prettytable
 import copy
-#print os.path.dirname(os.path.realpath(__file__))
+
 main_script_path = os.path.dirname(os.path.realpath(__file__))
-#data_path="/home/priyansh/Downloads/sem6/db_system/ass1/data/"
-#data_folder_name="data"
-#data_path=main_script_path+"/"+data_folder_name+"/"
-data_path=main_script_path+"/"
+data_path=main_script_path
 schema={} ##dictionary of tuples where each tuple belongs to a table which conatins all its column names
 dataset=collections.defaultdict(list) ##dictionary in which table is key and its value is a list which contains each of its row as dict
 AGGREGATE_FUNCTIONS=("avg", "max", "min", "sum")
@@ -32,7 +29,7 @@ def quotes_removal(s): ## to remove "" or '' from values in table.
 def generate_schema_and_load_data(filename):
 ##Generate the table structure using database schema
 ##here filename is "metadata.txt"
-    with open(data_path+filename, "r") as f:
+    with open(os.path.join(data_path,filename), "r") as f:
         table_found=-1
         for row in f.readlines():
             row=quotes_removal(row) ## to remove "" or '' from each row of metadata.txt
@@ -69,7 +66,7 @@ def generate_schema_and_load_data(filename):
     #print "Data is loading from each table files"
     for filename in files:
         #print "Data loaded from "+str(filename)
-        with open(data_path+filename,"r") as f:
+        with open(os.path.join(data_path,filename),"r") as f:
             for row in f.readlines():
                 split_row=row.split(",")
                 tablename=filename.split(".")[0]
