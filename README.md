@@ -20,7 +20,7 @@ Mini SQL Engine is written in Python and can parse and execute SQL queries (give
 ## Files
 - ```mini_sql.py```: Intensively documented main file 
 - ```sample_data```: It holds two sample data inside folders ```A``` and ```B``` for experimentation
-- ```instructions.txt```: Instructions to run sql query
+- ```instructions.md```: Instructions to run sql query
 - ```metadata.txt```: Metadata file, it contains table and column names
 - ```table1.csv```: It holds data of table named "table1"
   
