@@ -1,6 +1,6 @@
 # About
 This repository contains code resource of my DBMS project named **Mini SQL Engine**.
-Mini SQL Engine is written in Python and can parse and execute SQL queries (given using command-line interface) on data stored as CSV files. ```sqlparse``` library is used to parse the query. Read ```problem_description.pdf``` for details.  
+Mini SQL Engine is written in Python and can parse and execute SQL queries (given using command-line interface) on data stored as CSV files. ```sqlparse``` library is used to format a given query which then parsed and executed by the engine. Read ```problem_description.pdf``` for details.  
 
  Following cases of query processing are handled as of now.
 - Blank column entries while entering data
