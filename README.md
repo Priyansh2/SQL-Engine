@@ -1,16 +1,16 @@
 # About
-This repository contains code resource of my DBMS project named **Mini SQL Engine**.
-Mini SQL Engine is written in Python and can parse and execute SQL queries (given using command-line interface) on data stored as CSV files. Read ```problem_description.pdf``` for details.  
+This repository contains the codebase of my DBMS project named **Mini SQL Engine**.
+Mini SQL Engine is written in Python and can parse and execute a subset of DML queries given using the command-line interface on data stored as CSV files. Please Read ```problem_description.pdf``` for more details.  
 
  Following cases of query processing are handled as of now.
 - Blank column entries while entering data
-- Single and double quotted values in CSV files
+- Single and double quoted values in CSV files
 - Multiple AND/OR queries, including nested ones
 - Operators handled in column comparison: `=, !=, >, <, <=, >=`
-- Aggregate functions: `distinct, sum, min, max, avg`
+- Aggregate functions: `distinct, sum, min, max, avg.`
 - Pretty Table output
 - Summary of successful query
-- Table alaising
+- Table aliasing
 
 ## Requirements
 - Python 2.7 
@@ -18,14 +18,14 @@ Mini SQL Engine is written in Python and can parse and execute SQL queries (give
 - Pretty Table (```pip install prettytable```)
 
 ## Files
-- ```mini_sql.py```: Intensively documented main file 
-- ```sample_data```: It holds two sample data inside folders ```A``` and ```B``` for experimentation
+- ```mini_sql.py```: Main File
+- ```sample_data```: It contains two sample data inside folders ```A``` and ```B``` for testing purpose.
 - ```instructions.md```: Instructions to run sql query
-- ```metadata.txt```: Metadata file, it contains table and column names
-- ```table1.csv```: It holds data of table named "table1"
+- ```metadata.txt```: Contains metadata: table and column names
+- ```table1.csv```: It contains data of table named "table1"
   
 ## NOTE:
 1. Column name should not start with number but can contain a table name. 
 2. The case of the DML language (query) does not matter.
-4. When selection from multiple tables is made, then user will expect to give a equijoin condition else, it would perform cross-join and output the result accordingly.
-5. In case of multiple AND/OR, the conditions will be properly enclosed within ```()```.
+4. When selection from multiple tables is made, the user will expect to give an equijoin condition; otherwise, it would perform cross-join and output the result accordingly.
+5. In case of multiple AND/OR, the conditions must be properly enclosed within ```()```.
